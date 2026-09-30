@@ -1110,310 +1110,11 @@
 
 
 
-@media (max-width: 800px) {
 
-    .alur-psu {
-        flex-direction: column;
-    }
 
-    .psu-panah {
-        transform: rotate(90deg);
-    }
 
-    .psu-tahap {
-        width: 230px;
-    }
-}
 
-.stiker-gelembung-kanan {
-    width: 80px;
-    right: 10px;
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    pointer-events: none;
-    z-index: 0;
-}
-.stiker-gelembung-kiri {
-    width: 80px;
-    left: 10px;
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    pointer-events: none;
-    z-index: 0;
-}
-.stiker-gelembung-kiri img,
-.stiker-gelembung-kanan img {
-    position: absolute;
-    width: 80px;
-    opacity: 0.7;
-    animation: gelembungNaik 8s linear infinite;
-}
 
-.stiker-gelembung-kiri img:nth-child(1),
-.stiker-gelembung-kanan img:nth-child(1) {
-    animation-delay: 0s;
-}
-
-.stiker-gelembung-kiri img:nth-child(2),
-.stiker-gelembung-kanan img:nth-child(2) {
-    animation-delay: 2.6s;
-}
-
-.stiker-gelembung-kiri img:nth-child(3),
-.stiker-gelembung-kanan img:nth-child(3) {
-    animation-delay: 5.2s;
-}
-
-@keyframes gelembungNaik {
-    0% {
-        bottom: -120px;
-        transform: translateX(0);
-    }
-
-    50% {
-        transform: translateX(15px);
-    }
-
-    100% {
-        bottom: 100%;
-        transform: translateX(-10px);
-    }
-}
-
-
-
-
-       
-
-
-
-
-@media (max-width: 800px) {
-
-    body {
-        padding: 15px;
-        background-attachment: scroll;
-    }
-
-    
-    .card1,
-    .card2,
-    .card3,
-    .card4 {
-        width: 95%;
-        padding: 20px;
-        margin: 15px auto;
-    }
-
-
-    
-    .stiker {
-        width: 100px;
-    }
-
-    .stiker-multimeter {
-        width: 180px;
-    }
-
-
-    
-    .multimeter-layout {
-        flex-direction: column;
-        align-items: center;
-        gap: 20px;
-    }
-
-    .teks-multimeter {
-        width: 100%;
-    }
-
-    .gambar-multimeter {
-        width: 80%;
-        max-width: 350px;
-    }
-
-    .simulasi-multimeter {
-        width: 100%;
-    }
-
-
-    
-    .analog-layout {
-        flex-direction: column;
-        align-items: center;
-        gap: 20px;
-    }
-
-    .teks-analog {
-        width: 100%;
-    }
-
-    .simulasi-analog {
-        width: 100%;
-        max-width: 360px;
-    }
-
-    .analog-meter {
-        max-width: 100%;
-    }
-
-
-    
-    table {
-        display: block;
-        width: 100%;
-        overflow-x: auto;
-        white-space: nowrap;
-    }
-
-
-    
-    .animasi-komponen {
-        grid-template-columns: 1fr;
-    }
-
-    .komponen-animasi {
-        width: 100%;
-    }
-
-
-    
-    .alur-psu {
-        flex-direction: column;
-    }
-
-    .psu-panah {
-        transform: rotate(90deg);
-    }
-
-    .psu-tahap {
-        width: 90%;
-        max-width: 300px;
-    }
-
-
-    
-    .stiker-gelembung-kiri {
-        left: 2px;
-        width: 50px;
-    }
-
-    .stiker-gelembung-kanan {
-        right: 2px;
-        width: 50px;
-    }
-
-    .stiker-gelembung-kiri img,
-    .stiker-gelembung-kanan img {
-        width: 50px;
-    }
-}
-
-
-
-
-@media (max-width: 480px) {
-
-    body {
-        padding: 10px;
-    }
-
-    .card1,
-    .card2,
-    .card3,
-    .card4 {
-        width: 100%;
-        padding: 15px;
-    }
-
-
-    .judul-tengah h1 {
-        font-size: 22px;
-    }
-
-    .judul-tengah h2 {
-        font-size: 19px;
-    }
-
-
-    
-    .stiker {
-        width: 70px;
-    }
-
-    .stiker-multimeter {
-        width: 130px;
-    }
-
-
-    
-    .multimeter-body {
-        width: 230px;
-        min-height: 370px;
-        padding: 15px;
-    }
-
-    .multimeter-screen {
-        height: 65px;
-        font-size: 24px;
-    }
-
-    .selector-knob {
-        width: 65px;
-        height: 65px;
-    }
-
-    .terminal-area {
-        gap: 25px;
-    }
-
-
-    
-    .simulasi-analog {
-        padding: 12px;
-    }
-
-    .analog-meter {
-        width: 280px;
-        transform: scale(0.9);
-        transform-origin: center;
-        margin-top: 0;
-        margin-bottom: -15px;
-    }
-
-
-    
-    .visual {
-        height: 130px;
-    }
-
-
-    
-    .psu-tahap {
-        width: 95%;
-        padding: 12px;
-    }
-
-    .psu-icon {
-        width: 55px;
-        height: 55px;
-        font-size: 27px;
-    }
-
-
-    
-    .stiker-gelembung-kiri,
-    .stiker-gelembung-kanan {
-        width: 35px;
-    }
-
-    .stiker-gelembung-kiri img,
-    .stiker-gelembung-kanan img {
-        width: 35px;
-    }
-}
 
 
 
@@ -1449,11 +1150,99 @@
     }
 
 }
+
+
+
+
+
+.layar-potrait {
+    display: none;
+}
+
+@media (orientation: portrait) and (max-width: 900px) {
+
+    .layar-potrait {
+        position: fixed;
+        inset: 0;
+        z-index: 999999;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        padding: 25px;
+        box-sizing: border-box;
+
+        background: #A7D8F0;
+    }
+
+    .kotak-putar {
+        width: 100%;
+        max-width: 420px;
+
+        padding: 30px 25px;
+        box-sizing: border-box;
+
+        background: white;
+        border: 3px solid #4A90E2;
+        border-radius: 25px;
+
+        text-align: center;
+
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    }
+
+    .ikon-putar {
+        font-size: 55px;
+        margin-bottom: 10px;
+
+        animation: animasiPutar 1.8s ease-in-out infinite;
+    }
+
+    .kotak-putar h2 {
+        margin: 10px 0;
+        color: #2F5F8F;
+        font-size: 25px;
+    }
+
+    .kotak-putar p {
+        margin: 0;
+        color: #4F6170;
+        font-size: 16px;
+        line-height: 1.6;
+    }
+
+}
+
+@keyframes animasiPutar {
+    0%, 100% {
+        transform: rotate(0deg);
+    }
+
+    50% {
+        transform: rotate(90deg);
+    }
+}
             
         </style>
     </head>
 
     <body>
+
+<div class="layar-potrait">
+    <div class="kotak-putar">
+        <div class="ikon-putar">↔️</div>
+        <h2>Putar perangkatmu</h2>
+        <p>
+            Silakan putar HP ke posisi <b>landscape</b>
+            untuk melihat website dengan optimal.
+        </p>
+    </div>
+</div>
+
+
+
+
         <div class="stiker-gelembung-kiri">
             <img src="gelembung.png">
             <img src="gelembung.png">
