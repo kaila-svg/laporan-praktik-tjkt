@@ -1,0 +1,1953 @@
+<!DOCTYPE html>
+<html lang="id">
+    <head>
+        <meta charset="UTF-8">
+        <title>Pengukuran Besaran Listrik</title>
+        <style>body {
+            background-color: #A7D8F0;
+            font-family: "Segoe UI", sans-serif;
+            color: #2d4a76;
+            margin: 0;
+            padding: 30px;
+            background-image:
+        url("background-laut\ png.jpeg");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            position: relative;
+            }
+            .stiker {
+                position: absolute;
+                width: 180px;
+                animation: gerakLembut 3s ease-in-out infinite;
+            }
+              @keyframes gerakLembut {
+                0%, 100% {
+                    transform: translateY(0) scale(1);
+                }
+                50% {
+                    transform: translateY(-12px) scale(1.04);
+                }
+              }
+            .stiker-multimeter {
+                position: absolute;
+                width: 320px;
+                border-radius: 20px;
+                background-color: #f6feff;
+                box-sizing: border-box;
+                padding: 4px;
+                border: 3px solid #4b6ea4;
+            }
+
+
+
+            .card1 {
+                background-color: #92d6fb;
+                border: 2px solid #4182cc;
+                border-radius: 20px;
+                margin-bottom: 20px;
+                width: 80%;
+                margin: 20px auto;
+                padding: 25px;
+                box-sizing: border-box;
+                
+            }
+            .card2 {
+                background-color: #41b7cc;
+                border: 2px solid #19689a;
+                border-radius: 20px;
+                margin-bottom: 20px;
+                width: 80%;
+                margin: 20px auto;
+                padding: 25px;
+                box-sizing: border-box;
+                
+            }
+            .card3 {
+                background-color: #8aedfe;
+                border: 2px solid #11646c;
+                border-radius: 20px;
+                margin-bottom: 20px;
+                width: 80%;
+                margin: 20px auto;
+                padding: 25px;
+                box-sizing: border-box;
+                
+            }
+            .card4 {
+                background-color:#5be7dc;
+                border: 2px solid #24b1ad;
+                border-radius: 20px;
+                margin-bottom: 20px;
+                width: 80%;
+                margin: 20px auto;
+                padding: 25px;
+                box-sizing: border-box;
+                
+            }
+            
+            
+            .judul-tengah {
+                text-align: center;
+            }
+            table {
+                margin: 20px auto;
+            }
+            .multimeter-layout {
+                display: flex;
+                gap: 20px;
+            }
+            .teks-multimeter {
+                flex: 1;
+            }
+            .gambar-multimeter {
+                width: 30%;
+            }
+            .gambar-multimeter img {
+                width: 100%;
+                height: auto;
+            }
+            .foto-praktik {
+                border-radius: 20px;
+            }
+            .multimeter-layout {
+    display: flex;
+    align-items: flex-start;
+    gap: 30px;
+    width: 100%;
+}
+
+
+
+.teks-multimeter {
+    flex: 1;
+}
+
+
+
+.simulasi-multimeter {
+    width: 300px;
+    flex-shrink: 0;
+    display: flex;
+    justify-content: center;
+}
+
+
+
+.multimeter-body {
+    width: 250px;
+    min-height: 390px;
+    background-color: #d9e1e5;
+    border: 3px solid #555;
+    border-radius: 25px;
+    padding: 18px;
+    box-sizing: border-box;
+    text-align: center;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+}
+
+
+
+.multimeter-screen {
+    width: 100%;
+    height: 75px;
+    background-color: #dfe8c9;
+    border: 3px solid #555;
+    border-radius: 10px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    font-size: 28px;
+    font-weight: bold;
+    color: #263238;
+}
+
+
+
+.multimeter-screen .satuan {
+    font-size: 20px;
+}
+
+
+
+.selector-area {
+    margin-top: 25px;
+}
+
+
+.selector-label {
+    font-size: 12px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #444;
+}
+
+
+
+.selector-knob {
+    width: 75px;
+    height: 75px;
+    background-color: #555;
+    border: 5px solid #777;
+    border-radius: 50%;
+    margin: auto;
+    position: relative;
+    box-shadow: inset 0 3px 5px rgba(255, 255, 255, 0.3);
+}
+
+
+
+.knob-arrow {
+    width: 5px;
+    height: 28px;
+    background-color: white;
+    position: absolute;
+    top: 8px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 5px;
+}
+
+
+
+.terminal-area {
+    display: flex;
+    justify-content: center;
+    gap: 35px;
+    margin-top: 28px;
+}
+
+
+
+.terminal {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 3px solid #444;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-weight: bold;
+}
+
+
+
+.terminal.merah {
+    background-color: #d9534f;
+}
+
+
+.terminal.hitam {
+    background-color: #222;
+}
+
+
+.tombol-ukur {
+    margin-top: 28px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    background-color: #4a90e2;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+
+.tombol-ukur:hover {
+    transform: scale(1.05);
+}
+     .selector-knob {
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+#modeSekarang {
+    margin-top: 10px;
+    font-size: 13px;
+    font-weight: bold;
+    color: #555;
+}
+
+.tombol-ukur:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}       
+            .analog-layout {
+    display: flex;
+    align-items: flex-start;
+    gap: 30px;
+    width: 100%;
+}
+
+.teks-analog {
+    flex: 1;
+}
+
+.simulasi-analog {
+    width: 360px;
+    flex-shrink: 0;
+    text-align: center;
+    background-color: #e8f7fb;
+    border: 2px solid #4a90e2;
+    border-radius: 18px;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.simulasi-analog h3 {
+    margin-top: 0;
+    color: #176b87;
+}
+
+
+
+
+.analog-meter {
+    width: 310px;
+    height: 210px;
+    margin: 15px auto;
+    background-color: #dce5e8;
+    border: 4px solid #555;
+    border-radius: 160px 160px 25px 25px;
+    padding-top: 25px;
+    box-sizing: border-box;
+}
+
+
+
+
+.analog-scale {
+    position: relative;
+    width: 250px;
+    height: 160px;
+    margin: auto;
+    background-color: #fff;
+    border: 3px solid #555;
+    border-radius: 140px 140px 0 0;
+    overflow: hidden;
+}
+
+
+
+
+.analog-scale::before {
+    content: "";
+    position: absolute;
+    width: 210px;
+    height: 105px;
+    left: 17px;
+    top: 28px;
+    border-top: 4px solid #38b9d6;
+    border-radius: 50% 50% 0 0;
+}
+
+
+
+
+.angka {
+    position: absolute;
+    font-size: 12px;
+    font-weight: bold;
+    color: #333;
+}
+
+.angka-0 {
+    left: 10px;
+    bottom: 20px;
+}
+
+.angka-10 {
+    left: 35px;
+    top: 55px;
+}
+
+.angka-20 {
+    left: 75px;
+    top: 30px;
+}
+
+.angka-30 {
+    left: 120px;
+    top: 20px;
+}
+
+.angka-40 {
+    right: 65px;
+    top: 30px;
+}
+
+.angka-50 {
+    right: 15px;
+    bottom: 20px;
+}
+
+
+
+
+.jarum {
+    position: absolute;
+    width: 4px;
+    height: 105px;
+    background-color: #e95b5b;
+    left: 50%;
+    bottom: 10px;
+    transform-origin: bottom center;
+    transform: rotate(-90deg);
+    transition: transform 1s ease;
+    border-radius: 5px;
+    z-index: 3;
+}
+
+
+
+
+.ujung-jarum {
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    background-color: #e95b5b;
+    border-radius: 50%;
+    top: -4px;
+    left: -2px;
+}
+
+
+
+
+.titik-tengah {
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    background-color: #555;
+    border-radius: 50%;
+    left: calc(50% - 9px);
+    bottom: 1px;
+    z-index: 5;
+}
+
+
+
+
+.pengaturan-analog {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-top: 15px;
+}
+
+.pengaturan-analog label {
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.pengaturan-analog select {
+    padding: 5px 8px;
+    border-radius: 6px;
+    border: 1px solid #777;
+}
+
+
+
+
+.tombol-analog {
+    margin-top: 18px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    background-color: #4a90e2;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.tombol-analog:hover {
+    transform: scale(1.05);
+}
+
+
+
+
+.hasil-analog {
+    margin-top: 15px;
+    padding: 10px;
+    background-color: #d4f1f7;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #176b87;
+}
+
+
+
+
+
+.animasi-komponen {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.komponen-animasi {
+    background: white;
+    border: 2px solid #4a90e2;
+    border-radius: 15px;
+    padding: 18px;
+    text-align: center;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.komponen-animasi h3 {
+    color: #2874c6;
+    margin-top: 0;
+}
+
+.komponen-animasi p {
+    margin-bottom: 0;
+}
+
+.visual {
+    height: 150px;
+    background: #eaf7ff;
+    border-radius: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+
+.resistor-visual {
+    gap: 10px;
+}
+
+.arus {
+    color: #2980b9;
+    animation: jalan 1.5s linear infinite;
+}
+
+.resistor-benda {
+    width: 90px;
+    height: 35px;
+    background: #d69b5b;
+    border: 3px solid #555;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.resistor-benda span {
+    width: 8px;
+    height: 35px;
+    background: #8b4513;
+}
+
+
+.pot-body {
+    width: 85px;
+    height: 55px;
+    background: #333;
+    border-radius: 10px;
+}
+
+.pot-knob {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background: #777;
+    position: absolute;
+    animation: putarPot 2s ease-in-out infinite alternate;
+}
+
+.pot-arus {
+    position: absolute;
+    bottom: 25px;
+    color: #2980b9;
+    animation: jalan 1.5s linear infinite;
+}
+
+
+.kap-plat {
+    width: 8px;
+    height: 75px;
+    background: #555;
+    margin: 15px;
+}
+
+.muatan {
+    position: absolute;
+    color: #000000;
+    animation: muatan 2s infinite;
+}
+
+
+.dioda-benda {
+    width: 80px;
+    height: 35px;
+    border: 3px solid #555;
+    background: #555;
+    border-radius: 20px;
+}
+
+.dioda-arus {
+    position: absolute;
+    color: #0de7ff;
+    animation: jalan 1.5s linear infinite;
+}
+
+.balik {
+    display: none;
+}
+
+
+.led-benda {
+    width: 45px;
+    height: 45px;
+    background: #4fc3f7;
+    border-radius: 50%;
+    border: 4px solid #2874c6;
+    animation: nyalaLED 1.2s infinite alternate;
+}
+
+.cahaya {
+    position: absolute;
+    color: #f1c40f;
+    font-size: 25px;
+    animation: cahayaLED 1.2s infinite alternate;
+}
+
+
+.transistor-benda {
+    width: 55px;
+    height: 65px;
+    background: #333;
+    border-radius: 8px;
+    position: relative;
+}
+
+.kaki {
+    position: absolute;
+    width: 5px;
+    height: 45px;
+    background: #aaa;
+    top: 55px;
+}
+
+.kiri {
+    left: 8px;
+}
+
+.tengah {
+    left: 25px;
+}
+
+.kanan {
+    right: 8px;
+}
+
+.transistor-arus {
+    position: absolute;
+    color: #10f7ff;
+    animation: jalan 1.5s linear infinite;
+}
+
+
+.kumparan {
+    font-size: 45px;
+    color: #555;
+    animation: gerakKumparan 1.5s infinite alternate;
+}
+
+.induktor-arus {
+    position: absolute;
+    color: #000000;
+    animation: jalan 1.5s linear infinite;
+}
+
+
+.saklar-kontak {
+    width: 80px;
+    height: 8px;
+    background: #555;
+    position: absolute;
+}
+
+.saklar-tuas {
+    width: 65px;
+    height: 7px;
+    background: #2874c6;
+    position: absolute;
+    transform-origin: left;
+    animation: saklar 2s infinite alternate;
+}
+
+.saklar-arus {
+    color: #2980b9;
+    position: absolute;
+    bottom: 25px;
+    animation: jalan 1.5s linear infinite;
+}
+
+
+.baterai {
+    width: 55px;
+    height: 80px;
+    border: 4px solid #555;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    background: #eee;
+}
+
+.baterai div {
+    width: 45px;
+    height: 12px;
+    background: #555;
+}
+
+.baterai span:first-child {
+    color: #e74c3c;
+}
+
+.baterai span:last-child {
+    color: #333;
+}
+
+.energi {
+    position: absolute;
+    color: #f1c40f;
+    animation: energi 1s infinite alternate;
+}
+
+
+.fuse-benda {
+    width: 100px;
+    height: 35px;
+    border: 4px solid #777;
+    border-radius: 20px;
+    background: #dfe6e9;
+    position: relative;
+}
+
+.fuse-benda::after {
+    content: "";
+    width: 55px;
+    height: 3px;
+    background: #e67e22;
+    position: absolute;
+    left: 20px;
+    top: 12px;
+    animation: fuse 1.5s infinite alternate;
+}
+
+.fuse-arus {
+    position: absolute;
+    color: #2980b9;
+    animation: jalan 1.5s linear infinite;
+}
+
+
+.heatsink-benda {
+    display: flex;
+    gap: 5px;
+}
+
+.heatsink-benda span {
+    width: 12px;
+    height: 70px;
+    background: #777;
+    border-radius: 3px;
+}
+
+.panas {
+    position: absolute;
+    color: #e67e22;
+    top: 25px;
+    animation: panas 1s infinite alternate;
+}
+
+
+.kumparan-trafo {
+    width: 45px;
+    height: 75px;
+    border: 8px solid #777;
+    border-radius: 50%;
+}
+
+.inti-trafo {
+    width: 35px;
+    height: 85px;
+    background: #555;
+    margin: 0 8px;
+}
+
+.trafo-arus {
+    position: absolute;
+    color: #2980b9;
+    animation: jalan 1.5s linear infinite;
+}
+
+
+
+
+@keyframes jalan {
+    0% {
+        transform: translateX(-15px);
+        opacity: 0.3;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        transform: translateX(15px);
+        opacity: 0.3;
+    }
+}
+
+@keyframes putarPot {
+    from {
+        transform: rotate(-35deg) translateX(25px);
+    }
+    to {
+        transform: rotate(35deg) translateX(25px);
+    }
+}
+
+@keyframes muatan {
+    0% {
+        transform: translateX(-30px);
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        transform: translateX(30px);
+        opacity: 0;
+    }
+}
+
+@keyframes nyalaLED {
+    from {
+        box-shadow: 0 0 5px #4fc3f7;
+    }
+    to {
+        box-shadow: 0 0 35px #4fc3f7;
+    }
+}
+
+@keyframes cahayaLED {
+    from {
+        transform: scale(0.7);
+        opacity: 0.3;
+    }
+    to {
+        transform: scale(1.3);
+        opacity: 1;
+    }
+}
+
+@keyframes gerakKumparan {
+    from {
+        transform: scaleX(0.9);
+    }
+    to {
+        transform: scaleX(1.1);
+    }
+}
+
+@keyframes saklar {
+    from {
+        transform: rotate(25deg);
+    }
+    to {
+        transform: rotate(-25deg);
+    }
+}
+
+@keyframes energi {
+    from {
+        transform: scale(0.8);
+        opacity: 0.3;
+    }
+    to {
+        transform: scale(1.2);
+        opacity: 1;
+    }
+}
+
+@keyframes fuse {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0.3;
+    }
+}
+
+@keyframes panas {
+    from {
+        transform: translateY(10px);
+        opacity: 0.4;
+    }
+    to {
+        transform: translateY(-20px);
+        opacity: 1;
+    }
+}
+
+
+
+@media (max-width: 700px) {
+    .animasi-komponen {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+
+.psu-animasi-section {
+    margin-top: 30px;
+}
+
+.psu-intro {
+    text-align: center;
+    max-width: 750px;
+    margin: 0 auto 25px;
+}
+
+.alur-psu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.psu-tahap {
+    width: 150px;
+    min-height: 190px;
+    padding: 15px;
+    background: rgba(255, 255, 255, 0.9);
+    border: 2px solid #4a90e2;
+    border-radius: 15px;
+    text-align: center;
+    box-sizing: border-box;
+    transition: transform 0.3s ease;
+}
+
+
+.psu-tahap:nth-child(1),
+.psu-tahap:nth-child(5),
+.psu-tahap:nth-child(9) {
+    animation: naikTurun 2s ease-in-out infinite;
+}
+
+.psu-tahap:nth-child(3),
+.psu-tahap:nth-child(7) {
+    animation: naikTurun 2s ease-in-out infinite 0.5s;
+}
+
+.psu-tahap:nth-child(11),
+.psu-tahap:nth-child(15) {
+    animation: naikTurun 2s ease-in-out infinite 1s;
+}
+
+.psu-tahap h3 {
+    color: #2874c6;
+    margin: 12px 0 8px;
+}
+
+.psu-tahap p {
+    font-size: 14px;
+    line-height: 1.5;
+    margin: 0;
+}
+
+.psu-icon {
+    width: 65px;
+    height: 65px;
+    margin: auto;
+    border-radius: 50%;
+    border: 3px solid #4a90e2;
+    background: #eaf7ff;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 32px;
+    color: #2874c6;
+}
+
+
+.ac-icon {
+    animation: listrik 1s ease-in-out infinite alternate;
+}
+
+
+.gelombang-ac {
+    animation: gelombangAC 1s linear infinite;
+}
+
+.gelombang-filter {
+    animation: gelombangHalus 1.5s ease-in-out infinite;
+}
+
+
+.regulator-icon {
+    animation: putarGear 2s linear infinite;
+}
+
+
+.dc-icon {
+    animation: outputDC 1.2s ease-in-out infinite alternate;
+}
+
+
+.psu-panah {
+    font-size: 32px;
+    color: #4a90e2;
+    animation: gerakPanah 1.2s ease-in-out infinite alternate;
+}
+
+
+
+
+@keyframes listrik {
+    from {
+        transform: scale(0.9);
+        opacity: 0.6;
+    }
+
+    to {
+        transform: scale(1.1);
+        opacity: 1;
+    }
+}
+
+@keyframes gelombangAC {
+    0% {
+        transform: translateX(-8px);
+    }
+
+    50% {
+        transform: translateX(8px);
+    }
+
+    100% {
+        transform: translateX(-8px);
+    }
+}
+
+@keyframes gelombangHalus {
+    0% {
+        transform: scaleX(0.9);
+    }
+
+    50% {
+        transform: scaleX(1.1);
+    }
+
+    100% {
+        transform: scaleX(0.9);
+    }
+}
+
+@keyframes putarGear {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes outputDC {
+    from {
+        transform: scale(0.9);
+    }
+
+    to {
+        transform: scale(1.1);
+    }
+}
+
+@keyframes gerakPanah {
+    from {
+        transform: translateX(-4px);
+    }
+
+    to {
+        transform: translateX(4px);
+    }
+}
+
+@keyframes naikTurun {
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-5px);
+    }
+}
+
+
+
+@media (max-width: 800px) {
+
+    .alur-psu {
+        flex-direction: column;
+    }
+
+    .psu-panah {
+        transform: rotate(90deg);
+    }
+
+    .psu-tahap {
+        width: 230px;
+    }
+}
+
+.stiker-gelembung-kanan {
+    width: 80px;
+    right: 10px;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    pointer-events: none;
+    z-index: 0;
+}
+.stiker-gelembung-kiri {
+    width: 80px;
+    left: 10px;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    pointer-events: none;
+    z-index: 0;
+}
+.stiker-gelembung-kiri img,
+.stiker-gelembung-kanan img {
+    position: absolute;
+    width: 80px;
+    opacity: 0.7;
+    animation: gelembungNaik 8s linear infinite;
+}
+
+.stiker-gelembung-kiri img:nth-child(1),
+.stiker-gelembung-kanan img:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.stiker-gelembung-kiri img:nth-child(2),
+.stiker-gelembung-kanan img:nth-child(2) {
+    animation-delay: 2.6s;
+}
+
+.stiker-gelembung-kiri img:nth-child(3),
+.stiker-gelembung-kanan img:nth-child(3) {
+    animation-delay: 5.2s;
+}
+
+@keyframes gelembungNaik {
+    0% {
+        bottom: -120px;
+        transform: translateX(0);
+    }
+
+    50% {
+        transform: translateX(15px);
+    }
+
+    100% {
+        bottom: 100%;
+        transform: translateX(-10px);
+    }
+}
+
+
+
+
+            
+            
+        </style>
+    </head>
+
+    <body>
+        <div class="stiker-gelembung-kiri">
+            <img src="gelembung.png">
+            <img src="gelembung.png">
+            <img src="gelembung.png">
+        </div>
+
+        <div class="stiker-gelembung-kanan">
+            <img src="gelembung.png">
+            <img src="gelembung.png">
+            <img src="gelembung.png">
+        </div>
+
+
+         <img src="multimeter2.png" class="stiker-multimeter"
+         style="top: 500px; right: 300px;">
+         <img src="multimater.jpg.jpeg" class="stiker-multimeter"
+         style="top: 1065px; right: 350px;">
+
+        <img src="lumba.png" class="stiker" 
+        style  ="top: 450px; left: 5px;">
+        <img src="hiu.png" class="stiker"
+        style="top: 50px; right: 20px;">
+        <img src="penyu.png" class="stiker"
+        style="top: 1100px; right: 20px;">
+        <img src="kerangpink.png" class="stiker"
+        style="top: 400px; right: 30px">
+        <img src="paus.png" class="stiker"
+        style="top: 5470px; left: 10px">
+        <img src="kerangbiru.png" class="stiker"
+        style="top: 1950px; left:20px">
+        <img src="bintanglautping.png" class="stiker"
+        style="top: 2740px; right: 45px;">
+        <img src="pari.png" class="stiker"
+        style="top: 2770px; left:40px;">
+        <img src="kudalaut.png" class="stiker"
+        style="top: 3340px; right: 75px;">
+        <img src="terumbugedelubang.png" class="stiker"
+        style="top: 7500px; left: 20px;">
+        <img src="terumbugede.png" class="stiker"
+        style="top: 7500px; right: 20px;">
+        <img src="ubur.png" class="stiker"
+        style="top: 5720px; right:50px;">
+        
+
+
+       <div class="card1">
+       
+       <h2>Multimeter</h2>
+        <p>
+        Multimeter adalah alat ukur elektronik yang digunakan untuk mengukur beberapa besaran listrik
+        dalam satu alat. Multimeter juga sering disebut AVO meter, yaituu Ampere, Volt, Ohm.
+        </p>
+        
+        <h3>Multimeter Analog dan Digital</h3>
+        
+            <div class="teks-multimeter">
+        <h3>1.Multimeter Analog</h3>
+        <p>
+           Multimeter analog adalah alat ukur listrik yang menampilkan hasil pengukuran menggunakan jarum penunjuk yang bergerak pada skala angka. Multimeter analog dapat digunakan untuk mengukur beberapa besaran listrik, seperti tegangan (Volt), arus (Ampere), dan hambatan (Ohm).
+           Saat digunakan, pengguna perlu melihat posisi jarum pada skala yang sesuai dengan pengaturan alat untuk mengetahui hasil pengukurannya.
+        </p>
+        </div>
+        
+        
+
+
+        <div class="simulasi-analog">
+
+            <h3>Simulasi Multimeter Analog</h3>
+
+            <div class="analog-meter">
+
+                <div class="analog-scale">
+
+                    <div class="angka angka-0">0</div>
+                    <div class="angka angka-10">10</div>
+                    <div class="angka angka-20">20</div>
+                    <div class="angka angka-30">30</div>
+                    <div class="angka angka-40">40</div>
+                    <div class="angka angka-50">50</div>
+
+                    <div class="jarum" id="jarumAnalog">
+                        <div class="ujung-jarum"></div>
+                    </div>
+
+                    <div class="titik-tengah"></div>
+
+                </div>
+
+            </div>
+
+
+            <div class="pengaturan-analog">
+
+                <label for="rangeAnalog">
+                    Range:
+                </label>
+
+                <select id="rangeAnalog">
+
+                    <option value="10">
+                        10 V
+                    </option>
+
+                    <option value="50" selected>
+                        50 V
+                    </option>
+
+                    <option value="250">
+                        250 V
+                    </option>
+
+                </select>
+
+
+                <label for="teganganAnalog">
+                    Tegangan:
+                </label>
+
+                <select id="teganganAnalog">
+
+                
+
+                    <option value="20">
+                        20 V
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <button id="tombolAnalog" class="tombol-analog">
+                Mulai Ukur
+            </button>
+
+
+            <div id="hasilAnalog" class="hasil-analog">
+                Pilih range lalu mulai pengukuran.
+            </div>
+
+        </div>
+
+    
+
+
+
+        
+            <div class="teks-multimeter">
+        <h3>2.Multimeter Digital</h3>
+        <p>
+          Multimeter digital adalah alat ukur listrik yang menampilkan hasil pengukuran dalam bentuk angka pada layar digital. Seperti multimeter analog, multimeter digital dapat digunakan untuk mengukur tegangan, arus, dan hambatan, serta pada beberapa jenis alat memiliki fungsi pengukuran tambahan.
+          Hasil pengukuran pada multimeter digital umumnya lebih mudah dibaca karena nilai pengukuran langsung ditampilkan dalam bentuk angka.
+        </p>
+        
+       
+        </div>
+        <div class="simulasi-multimeter">
+            
+
+        <div class="multimeter-body">
+
+            
+            <div class="multimeter-screen">
+                <span id="layarMultimeter">0.00</span>
+                <span class="satuan">V</span>
+            </div>
+
+
+           
+            <div class="selector-area">
+
+                <div class="selector-label">
+                    OFF &nbsp; DCV 20V &nbsp; DCV 200V &nbsp; ACV &nbsp; Ω
+                </div>
+
+                <div class="selector-knob" id="selectorKnob">
+                    <div class="knob-arrow"></div>
+                </div>
+
+            </div>
+
+            <div id="modeSekarang">
+                Mode: OFF
+            </div>
+
+    <select id="teganganPSU">
+        <option value="5">5 V</option>
+        <option value="12" selected>12 V</option>
+        <option value="15">15 V</option>
+    </select>
+            
+            <div class="terminal-area">
+
+                <div class="terminal merah">
+                    <span>+</span>
+                </div>
+
+                <div class="terminal hitam">
+                    <span>−</span>
+                </div>
+            </div>
+        
+
+           
+            <button id="tombolUkur" class="tombol-ukur">
+                Mulai Ukur
+            </button>
+
+        </div>
+
+    </div>
+    
+
+                         
+
+        <table border="1">
+            <tr>
+                <th>No.</th>
+                <th>Perbedaan</th>
+                <th>Multimeter Analog</th>
+                <th>Multimeter Digital</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>Tampilan hasil</td>
+                <td>Menggunakan jarum dan skala</td>
+                <td>Menggunakan angka pada layar</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Cara membaca</td>
+                <td>Melihat posisi jarum pada skala</td>
+                <td>Membaca angka yang muncul pada layar</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Kemudahan membaca</td>
+                <td>Membutuhkan ketelitian saat membaca skala</td>
+                <td>Lebih mudah dibaca</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>Perubahan nilai</td>
+                <td>Jarum bergerak mengikuti peubahan nilai</td>
+                <td>Angka pada layar berubah mengikuti nilai</td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>Sumber daya</td>
+                <td>Tergantung jenis dan fungsi alat</td>
+                <td>Umum menggunakan baterai</td>
+            </tr>
+        </table>
+
+        <h3>Pengertian:</h3>
+        <h4>Volt</h4>
+        <p>
+           Volt adalah satuan untuk mengukur tegangan listrik.
+           Gampangnya, tegangan adalah dorongan yang membuat arus listrik dapat mengalir.
+        </p>
+        <h4>Ampere</h4>
+        <P>
+           Ampere adalah satuan untuk mengukur kuat arus listrik, yaitu seberapa banyak aliran 
+           muatan listrik yang melewati suatu titik dalam satu detik.
+        </P>
+        <h4>Ohm</h4>
+        <p>
+           Ohm adalah satuan untuk mengukur hambatan listrik.
+           Hambatan adalah sesuatu yang menghambat atau membatasi aliran arus listrik.
+        </p>
+        </div>
+        <div class="card2">
+        <h3>Listrik AC dan DC</h3>
+        <h4>AC — Alternating Current</h4>
+        <p>AC (Arus Bolak-Balik) adalah arus listrik yang arah dan nilainya berubah secara berkala.
+           Contohnya:Listrik rumah tangga yang disuplai oleh PLN, oven listrik dan setrika.
+        </p>
+
+        <h4>DC — Direct Current</h4>
+        <p>
+            DC (Arus Searah) adalah arus listrik yang mengalir dalam satu arah.
+            Contohnya:Solar cell, baterai ponsel dan powerbank
+        </p>
+        </div>
+        <div class="card3">
+        <h3 class="judul-tengah">Menu dan Fungsi yang  Biasanya Ada Pada Multimeter</h3>
+        <table border="2">
+            <tr>
+                <th>Simbol/Menu</th>
+                <th>Fungsi</th>
+            </tr>
+            <tr>
+                <td>V⎓ / DVC</td>
+                <td>Mengukur tegangan DC</td>
+            </tr>
+            <tr>
+                <td>V~ / ACV</td>
+                <td>Mengukur tegangan AC</td>
+            </tr>
+            <tr>
+                <td>Ω</td>
+                <td>Mengukur hambatan</td>
+            </tr>
+            <tr>
+                <td>A / mA / µA</td>
+                <td>Mengukur arus listrik</td>
+            </tr>
+            <tr>
+                <td>Continuity</td>
+                <td>Mengecek apakah kabel rangkaian tersambung atau terputus</td>
+            </tr>
+            <tr>
+                <td>Hz</td>
+                <td>Mengukur frekuensi listrik</td>
+            </tr>
+            <tr>
+                <td>F / Cap</td>
+                <td>Mengukur kapasitas kapasitor</td>
+            </tr>
+            <tr>
+                <td>ON / OFF</td>
+                <td>Menyalakan dan mematikan multimeter</td>
+            </tr>
+        </table>
+
+        <h4>CATATAN:</h4>
+        <P>Tidak semua multimeter memiliki menu tersebut. Multimeter sederhana biasanya hanya memiliki
+           beberapa fungsi dasar.
+        </P>
+        </div>    
+        <div class="card4">
+        <h3 class="judul-tengah">Komponen Elektronika Dasar</h3>
+        <table border="3">
+            <tr>
+                <th>Komponen</th>
+                <th>Fungsi sederhana</th>
+                <th>Cara kerja</th>
+            </tr>
+            <tr>
+                <td>Resistor</td>
+                <td>Membatasi arus</td>
+                <td>Memberikan hambatan terhadap aliran arus</td>
+            </tr>
+            <tr>
+                <td>Potensiometer</td>
+                <td>Mengatur nilai hambatan</td>
+                <td>Nilai hambatan berubah ketika knop/gesernya diubah</td>
+            </tr>
+            <tr>
+                <td>Kapasitor</td>
+                <td>Menyimpan muatan listrik</td>
+                <td>Menyimpan lalu melepaskan muatan listrik</td>
+            </tr>
+            <tr>
+                <td>Dioda</td>
+                <td>Mengarahkan arus</td>
+                <td>Umumnya membiarkan arus mengalir terutama dalam satu arah</td>
+            </tr>
+            <tr>
+                <td>LED</td>
+                <td>Menghasilkan cahaya</td>
+                <td>Mengeluarkan cahaya ketika dialiri arus dengan arah dan kondisi yang sesuai</td>
+            </tr>
+            <tr>
+                <td>Transistor</td>
+                <td>Sakelar/penguat sinyal</td>
+                <td>Mengendalikan arus yang lebih besar menggunakan sinyal pada terminal pengendalinya</td>
+            </tr>
+            <tr>
+                <td>Induktor</td>
+                <td>Menyimpan energi dalam medan magnet</td>
+                <td>Menghasilkan medan magnet ketika dialiri arus</td>
+            </tr>
+            <tr>
+                <td>Saklar(Switch)</td>
+                <td>Menyambung/memutus rangkaian</td>
+                <td>Saat ON rangkaian tersambung, saat OFF rangkaian terputus</td>
+            </tr>
+            <tr>
+                <td>Baterai</td>
+                <td>Sumber ebergi listrik DC</td>
+                <td>Mengubah energi kimia menjadi energi listrik</td>
+            </tr>
+            <tr>
+                <td>Sakering(fuse)</td>
+                <td>Perlindungan rangkaian</td>
+                <td>Putus ketika arus berlebbian sehingga rangkaian terlindungi</td>
+            </tr>
+            <tr>
+                <td>Heatsink</td>
+                <td>Membuang panas komponen elektronik</td>
+                <td>Panas diserap lalu disebarkan ke udara</td>
+            </tr>
+            <tr>
+                <td>Transformator</td>
+                <td>Mengubah tegangan AC</td>
+                <td>Medan magnet dari kumparan primer menginduksi tegangan pada kumparan sekunder</td>
+            </tr>
+        </table>
+        </div>
+
+        <h2>Visualisasi / Animasi Komponen</h2>
+
+<div class="animasi-komponen">
+
+    <!-- 1. RESISTOR -->
+    <div class="komponen-animasi">
+        <h3>Resistor</h3>
+        <div class="visual resistor-visual">
+            <div class="arus">→ → →</div>
+            <div class="resistor-benda">
+                <span></span><span></span><span></span>
+            </div>
+            <div class="arus">→ → →</div>
+        </div>
+        <p>Memberikan hambatan terhadap aliran arus listrik.</p>
+    </div>
+
+    <!-- 2. POTENSIOMETER -->
+    <div class="komponen-animasi">
+        <h3>Potensiometer</h3>
+        <div class="visual pot-visual">
+            <div class="pot-body"></div>
+            <div class="pot-knob"></div>
+            <div class="pot-arus">→ →</div>
+        </div>
+        <p>Mengatur besar kecilnya hambatan dan arus listrik.</p>
+    </div>
+
+    <!-- 3. KAPASITOR -->
+    <div class="komponen-animasi">
+        <h3>Kapasitor</h3>
+        <div class="visual kapasitor-visual">
+            <div class="kap-plat"></div>
+            <div class="kap-plat"></div>
+            <div class="muatan">+ − + − + −</div>
+        </div>
+        <p>Menyimpan dan melepaskan muatan listrik.</p>
+    </div>
+
+    <!-- 4. DIODA -->
+    <div class="komponen-animasi">
+        <h3>Dioda</h3>
+        <div class="visual dioda-visual">
+            <div class="dioda-benda"></div>
+            <div class="dioda-arus">→ → →</div>
+            <div class="dioda-arus balik">← ✕</div>
+        </div>
+        <p>Mengalirkan arus listrik hanya dalam satu arah.</p>
+    </div>
+
+    <!-- 5. LED -->
+    <div class="komponen-animasi">
+        <h3>LED</h3>
+        <div class="visual led-visual">
+            <div class="led-benda"></div>
+            <div class="cahaya">✦ ✦ ✦</div>
+        </div>
+        <p>Mengubah energi listrik menjadi cahaya.</p>
+    </div>
+
+    <!-- 6. TRANSISTOR -->
+    <div class="komponen-animasi">
+        <h3>Transistor</h3>
+        <div class="visual transistor-visual">
+            <div class="transistor-benda">
+                <div class="kaki kiri"></div>
+                <div class="kaki tengah"></div>
+                <div class="kaki kanan"></div>
+            </div>
+            <div class="transistor-arus">→ → →</div>
+        </div>
+        <p>Mengatur atau memperkuat aliran arus listrik.</p>
+    </div>
+
+    <!-- 7. INDUKTOR -->
+    <div class="komponen-animasi">
+        <h3>Induktor</h3>
+        <div class="visual induktor-visual">
+            <div class="kumparan">))))))))</div>
+            <div class="induktor-arus">→ → →</div>
+        </div>
+        <p>Menyimpan energi dalam bentuk medan magnet.</p>
+    </div>
+
+    <!-- 8. SAKLAR -->
+    <div class="komponen-animasi">
+        <h3>Saklar / Switch</h3>
+        <div class="visual saklar-visual">
+            <div class="saklar-kontak"></div>
+            <div class="saklar-tuas"></div>
+            <div class="saklar-arus">→ → →</div>
+        </div>
+        <p>Menyambung dan memutus aliran listrik.</p>
+    </div>
+
+    <!-- 9. BATERAI -->
+    <div class="komponen-animasi">
+        <h3>Baterai</h3>
+        <div class="visual baterai-visual">
+            <div class="baterai">
+                <span>+</span>
+                <div></div>
+                <span>−</span>
+            </div>
+            <div class="energi">⚡ ⚡ ⚡</div>
+        </div>
+        <p>Menyediakan energi listrik untuk rangkaian.</p>
+    </div>
+
+    <!-- 10. FUSE -->
+    <div class="komponen-animasi">
+        <h3>Sekering / Fuse</h3>
+        <div class="visual fuse-visual">
+            <div class="fuse-benda"></div>
+            <div class="fuse-arus">→ → →</div>
+        </div>
+        <p>Melindungi rangkaian dari arus listrik berlebih.</p>
+    </div>
+
+    <!-- 11. HEATSINK -->
+    <div class="komponen-animasi">
+        <h3>Heatsink</h3>
+        <div class="visual heatsink-visual">
+            <div class="heatsink-benda">
+                <span></span><span></span><span></span>
+                <span></span><span></span><span></span>
+            </div>
+            <div class="panas">↑ ↑ ↑</div>
+        </div>
+        <p>Membantu membuang panas dari komponen elektronik.</p>
+    </div>
+
+    <!-- 12. TRANSFORMATOR -->
+    <div class="komponen-animasi">
+        <h3>Transformator</h3>
+        <div class="visual trafo-visual">
+            <div class="kumparan-trafo kiri"></div>
+            <div class="inti-trafo"></div>
+            <div class="kumparan-trafo kanan"></div>
+            <div class="trafo-arus">→ ⚡ →</div>
+        </div>
+        <p>Mengubah tingkat tegangan listrik AC.</p>
+    </div>
+
+</div>
+
+
+        <div class="card1">
+        <h2>Tutorial Mengukur Besaran Listrik Menggunakan Multimeter Digital</h2>
+        <h3>1.Mengukur Tegangan (Volt)</h3>
+        <p>
+            1.Siapkan multimeter dan objek yang akan diukur.
+
+            2.Hubungkan kabel probe hitam ke terminal COM.
+
+            3.Hubungkan probe merah ke terminal V.
+
+            4.Tentukan jenis tegangan yang akan diukur, yaitu DC (V⎓) atau AC (V~).
+
+            5.Atur pilihan/range pengukuran sesuai perkiraan tegangan yang akan diukur.
+
+            6.Tempelkan kedua probe pada titik yang ingin diukur.
+
+            7.Amati nilai tegangan yang ditampilkan pada layar multimeter.
+        </p>
+        </div>
+        <div class="card2">
+        <h3>2.Mengukur Arus (Ampere)</h3>
+        <p>
+            1.Siapkan multimeter dan rangkaian yang akan diukur.
+
+            2.Hubungkan probe hitam ke terminal COM.
+
+            3.Hubungkan probe merah ke terminal A atau mA, sesuai perkiraan besar arus dan terminal yang tersedia pada multimeter.
+
+            4.Pilih pengukuran arus DC (A⎓) atau AC (A~) sesuai jenis arus yang diukur.
+
+            5.Putus rangkaian pada titik pengukuran.
+
+            6.Hubungkan multimeter secara seri dengan rangkaian.
+
+            7.Pilih range yang sesuai, kemudian amati nilai arus pada layar.
+        </p>
+        </div>
+        <div class="card3">
+        <h3>3.Mengukur Hambatan (Ohm)</h3>
+        <p>
+            1. Siapkan multimeter dan resistor/komponen yang akan diukur.
+
+            2.Hubungkan probe hitam ke terminal COM.
+
+            3.Hubungkan probe merah ke terminal V/Ω.
+
+            4.Putar pemilih fungsi ke Ω.
+
+            5.Pastikan komponen yang diukur tidak sedang dialiri sumber listrik.
+
+            6.Tempelkan kedua probe pada kedua ujung resistor atau komponen.
+
+            7.Amati nilai hambatan yang ditampilkan pada layar multimeter.
+        </p>
+        </div>
+        <div class="card4">
+        
+        <div class="multimeter-layout">
+            <div class="teks-multimeter">
+        <h2>Pengenalan PSU</h2>
+        <P>
+            PSU (Power Supply Unit) adalah perangkat yang berfungsi mengubah dan menyediakan sumber listrik yang dibutuhkan oleh komponen komputer. PSU menerima listrik dari sumber AC dan mengubahnya menjadi beberapa tegangan DC yang digunakan oleh komponen komputer.
+            Pada komputer, PSU dapat menyediakan beberapa keluaran tegangan, seperti +12 V, +5 V, dan +3,3 V.
+        </P>
+        </div>
+        <div class="gambar-multimeter">
+            <img src="PSU.png" class="foto-praktik" alt="Pengenalan PSU">
+        </div>
+        </div>
+
+        <H2>Komponen Elektronika yang Ada di PSU</H2>
+        <table border="4">
+            <tr>
+                <th>No.</th>
+                <th>Komponen Elektronika</th>
+                <th>Fungsi</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>Resistor</td>
+                <td>Membatasi atau mengatur arus listrik</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Kapasitor</td>
+                <td>Menyimpan muatan dan membantu penyaringan tegangan</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Dioda</td>
+                <td>Mengarahkan arus agar mengalir satu arah</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>Transistor/MOSFET</td>
+                <td>Mengatur atau melakukan switching pada rangkaian</td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>Induktor/Coil</td>
+                <td>Membantu penyaringan dan pengaturan arus</td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td>Transformator</td>
+                <td>Mengubah tingkat tegangan listrik</td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td>Sekring/Fuse</td>
+                <td>Melindungi rangkaian dari arus berlebih</td>
+            </tr>
+            <tr>
+                <td>8</td>
+                <td>Heatsink</td>
+                <td>Membantu membuang panas dari komponen</td>
+            </tr>
+        </table>
+        
+        
+        <h2>prinsip dan Cara Kerja PSU</h2>
+        <P>
+           Secara sederhana, proses kerja PSU dapat digambarkan:
+           Listrik AC → Penyearahan → Pengaturan/konversi → Penyaringan → Tegangan DC keluaran
+           PSU menerima listrik AC dari sumber listrik. Listrik tersebut kemudian diproses melalui rangkaian di dalam PSU sehingga menghasilkan tegangan DC yang sesuai untuk komponen komputer.
+        </P>
+        </div>
+
+<div class="psu-animasi-section">
+
+    <p class="psu-intro">
+        PSU bekerja dengan mengubah listrik AC menjadi listrik DC
+        yang lebih sesuai untuk digunakan oleh komponen elektronik.
+    </p>
+
+    <div class="alur-psu">
+
+        
+        <div class="psu-tahap">
+            <div class="psu-icon ac-icon">⚡</div>
+            <h3>AC Input</h3>
+            <p>Listrik AC masuk ke PSU.</p>
+        </div>
+
+        <div class="psu-panah">➜</div>
+
+        
+        <div class="psu-tahap">
+            <div class="psu-icon">
+                <div class="gelombang-ac">∿</div>
+            </div>
+            <h3>Penyearah</h3>
+            <p>AC diubah menjadi DC berdenyut.</p>
+        </div>
+
+        <div class="psu-panah">➜</div>
+
+       
+        <div class="psu-tahap">
+            <div class="psu-icon">
+                <div class="gelombang-filter">〰</div>
+            </div>
+            <h3>Filter</h3>
+            <p>Mengurangi riak pada tegangan.</p>
+        </div>
+
+        <div class="psu-panah">➜</div>
+
+       
+        <div class="psu-tahap">
+            <div class="psu-icon regulator-icon">⚙️</div>
+            <h3>Regulator</h3>
+            <p>Menstabilkan tegangan listrik.</p>
+        </div>
+
+        <div class="psu-panah">➜</div>
+
+        
+        <div class="psu-tahap">
+            <div class="psu-icon dc-icon">⎓</div>
+            <h3>DC Output</h3>
+            <p>Menghasilkan tegangan DC untuk perangkat.</p>
+        </div>
+
+    </div>
+</div>
+
+
+
+
+        <div class="card1">
+        <h2>Praktik Pengukuran PSU Menggunakan Multimeter</h2>
+        <P>Jika ingin belajar,kalian bisa mencoba mengukur besaran PSU. perhatikan langkah-langkah dibawah ini.</P>
+        <p>
+            <ol>
+            <li>Siapkan PSU dan multimeter yang akan digunakan untuk pengukuran.</li>
+
+            <li>Pada PSU ATX tertentu, PSU dapat diaktifkan dengan melakukan jump/bridging pada pin PS_ON dan GND menggunakan jumper PSU yang sesuai. Penggunaan paper clip untuk metode ini memang dikenal sebagai paperclip test, tetapi pin yang dijembatani harus dipastikan benar karena salah pin dapat merusak PSU atau menimbulkan risiko keselamatan.</li>
+
+            <li>Atur multimeter pada mode tegangan DC (V⎓/DCV) karena keluaran kabel PSU yang sedang kita ukur merupakan tegangan DC. Pilih range yang lebih tinggi daripada tegangan yang diperkirakan. Misalnya, jika tegangan yang akan diukur sekitar 12 V, pilih range 20 V jika pilihan tersebut tersedia.</li>
+            
+            <li>Hubungkan probe hitam multimeter ke COM, kemudian sentuhkan ujung probe hitam ke kabel/pin Ground (GND) PSU. Untuk pengujian PSU, ground dapat digunakan sebagai titik referensi.</li>
+
+            <li>Hubungkan probe merah ke kabel/pin PSU yang ingin diukur. Dengan probe hitam tetap pada Ground, probe merah dapat digunakan untuk mengukur tegangan pada kabel/pin lainnya. Nilai yang muncul pada layar multimeter menunjukkan tegangan antara titik tersebut dan Ground.</li>
+
+            <li>Catat nilai tegangan yang ditampilkan oleh multimeter untuk setiap kabel/pin yang diuji, kemudian bandingkan dengan nilai tegangan yang seharusnya sesuai dengan spesifikasi PSU.</li>
+            </ol>
+        </p>
+        </div>
+
+<script src="script.js"></script>
+    </body>
+
+</html> 
